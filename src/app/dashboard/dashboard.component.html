@@ -1,0 +1,14 @@
+<form class="form">
+
+      <input class="form-control" type="text" placeholder="Buchtitel" #title><br>
+      <input class="form-control" type="text" placeholder="Beschreibung" #description>
+      
+  <br>
+  <button (click)="add(title, description)" class="btn btn-danger">Submit</button>
+</form>
+
+<hr>
+
+<br-book [book]="book"
+         (rated)="sort($event)"
+          *ngFor="let book of books"></br-book>
